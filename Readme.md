@@ -1,4 +1,3 @@
-Be is a real-time rendering engine optimized to draw large amounts of geometric
-primitives.
-
+This is a small demo to illustrate the power of C and OpenGL inside of a browser
+through WASM and WebGL.
 

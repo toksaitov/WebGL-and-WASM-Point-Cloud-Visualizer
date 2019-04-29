@@ -19,11 +19,10 @@ SRC="$BASH_SOURCE"
 if [ "$SRC" = "" ]; then
   SRC="$0"
 fi
-CURDIR="$(pwd)"
-cd "$(dirname "$SRC")"
+pushd `dirname "$SRC"` > /dev/null
 unset SRC
 
 ./emsdk construct_env "$@"
 . ./emsdk_set_env.sh
 
-cd "$CURDIR"
+popd > /dev/null
